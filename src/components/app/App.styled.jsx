@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const AppStyled = styled.div`
+export const Container = styled.div`
   display: flex;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding-bottom: 24px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-`
+  gap: 16px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+`;

@@ -1,20 +1,13 @@
-import { ImageGalleryItem } from "components/imageGalleryItem/ImageGalleryItem";
-import { GalleryList } from "./Gallery.styled";
+import { ImageGalleryItem } from 'components/imageGalleryItem/ImageGalleryItem';
+import { GalleryList } from './Gallery.styled';
 
-export const ImageGallery = () => {
-    return (
-        <GalleryList>
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-            <ImageGalleryItem />
-
-        </GalleryList>
-    )
-}
+export const ImageGallery = ({ images }) => {
+  console.log('images in gallery :>> ', images);
+  return (
+    <GalleryList>
+      {images.map(el => (
+        <ImageGalleryItem key={el.id} image={el} />
+      ))}
+    </GalleryList>
+  );
+};

@@ -8,10 +8,8 @@ export const Search = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   min-height: 64px;
-  padding-right: 24px;
-  padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
