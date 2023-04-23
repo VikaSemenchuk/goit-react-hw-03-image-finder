@@ -1,10 +1,26 @@
-import { GalleryImg, GalleryItem } from "./GalleryItem.styled";
+import PropTypes from 'prop-types';
 
-export const ImageGalleryItem = ({image}) => {
-    const {webformatURL} = image
-    return (
-        <GalleryItem>
-            <GalleryImg src={webformatURL} />
-        </GalleryItem>
-    )
-}
+import { GalleryImg, GalleryItem } from './GalleryItem.styled';
+
+export const ImageGalleryItem = ({ image, openModal, getModalImg }) => {
+  const { img, alt, modalImg } = image;
+
+  return (
+    <GalleryItem>
+      <GalleryImg
+        src={img}
+        alt={alt}
+        onClick={() => {
+          getModalImg(modalImg, alt);
+          openModal();
+        }}
+      />
+    </GalleryItem>
+  );
+};
+
+ImageGalleryItem.propTypes = {
+  image: PropTypes.object.isRequired,
+  openModal: PropTypes.func.isRequired,
+  getModalImg: PropTypes.func.isRequired,
+};
